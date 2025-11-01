@@ -1,16 +1,5 @@
-// import css from "./App.module.css";
 
-// // import VoteOptions from "../VoteOptions";
-// // import VoteStats from "../VoteStats";
-// // import Notification from "../Notification";
-
-
-// export default function App ()
-//  {return (
-//  <div className={css.app}></div>);
-
-//  }
-
+import CafeInfo from "../CafeInfo/CafeInfo";
 import css from "./App.module.css";
 
 export default function App() {
@@ -22,11 +11,13 @@ export default function App() {
           Please rate our service by selecting one of the options below.
         </p>
 
+               <CafeInfo />
+
         <div className={css.buttons}>
-          <button className={css.button}>Excellent</button>
           <button className={css.button}>Good</button>
-          <button className={css.button}>Fair</button>
-          <button className={css.button}>Poor</button>
+          <button className={css.button}>Neutral</button>
+          <button className={css.button}>Bad</button>
+          <button className={css.button}>Reset</button>
         </div>
       </div>
     </div>
