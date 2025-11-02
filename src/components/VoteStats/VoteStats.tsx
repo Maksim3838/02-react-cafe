@@ -3,20 +3,20 @@ import css from "./VoteStats.module.css";
 
 interface VoteStatsProps {
   votes: Votes;
+  totalVotes: number;
+  positiveRate: number;
 }
 
- function VoteStats({ votes }: VoteStatsProps) {
-  const total = votes.good + votes.neutral + votes.bad;
-  const positivePercentage = total ? Math.round((votes.good / total) * 100) : 0;
-
+function VoteStats({ votes, totalVotes, positiveRate }: VoteStatsProps) {
   return (
     <div className={css.stats}>
       <p>Good: {votes.good}</p>
       <p>Neutral: {votes.neutral}</p>
       <p>Bad: {votes.bad}</p>
-      <p>Total: {total}</p>
-      <p>Positive feedback: {positivePercentage}%</p>
+      <p>Total: {totalVotes}</p>
+      <p>Positive feedback: {positiveRate}%</p>
     </div>
   );
 }
+
 export default VoteStats;
